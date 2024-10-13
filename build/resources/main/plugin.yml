@@ -1,0 +1,9 @@
+name: ElysiumLoginNetWork
+version: '1.0-SNAPSHOT'
+main: cn.skilfully.elysiumloginnetwork.ElysiumLoginNetWork
+api-version: '1.17'
+prefix: NetWork
+depend: [ElysiumLogin]
+authors: [bulefire_fox]
+description: 用于网络通信w！
+website: www.skilfully.cn
