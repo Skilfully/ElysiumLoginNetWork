@@ -48,3 +48,11 @@ processResources {
         expand props
     }
 }
+
+//sourceSets {
+//    main{
+//        resources {
+//            srcDir 'src/main/resources'
+//        }
+//    }
+//}
