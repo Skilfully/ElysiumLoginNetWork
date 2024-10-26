@@ -11,7 +11,6 @@ public final class ElysiumLoginNetWork extends JavaPlugin {
     private final Log logger = Log.getLog();
     @Override
     public void onEnable() {
-        // Plugin startup logic
         // 获取工作目录
         InsideGlobalVar.workPath = getDataFolder();
         // 获取插件
@@ -23,9 +22,6 @@ public final class ElysiumLoginNetWork extends JavaPlugin {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
-        //
-
     }
 
     @Override
