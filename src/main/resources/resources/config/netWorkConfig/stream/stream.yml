@@ -1,0 +1,13 @@
+# 额，我在思考这个文件有什么用
+# 实际上这里的所有配置都不会被读取并使用
+# qwp
+
+# 底层协议
+# tcp udp
+deepProtocol: "tcp"
+
+# 上层协议
+# class string(public) string(encrypt)
+uponProtocol: "class"
+
+# 不使用用这个配置文件的原因是我懒得实现这么多的配置 qwq

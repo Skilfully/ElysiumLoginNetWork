@@ -1,5 +1,18 @@
-bool: false
+# 主配置文件
 
-type: public
+# 是否开启网络功能
+# true 开启
+# false 不开启
+isOpen: false
 
-api: 123
+# 网络验证方式
+# stream 流式更新
+# mainServer 中心服务器式更新
+# 不理解的看我视频
+type: mainServer
+
+# 是否开启本地web服务器
+# true 开启
+# false 不开启
+# 不理解的看我视频
+isWebOpen: false

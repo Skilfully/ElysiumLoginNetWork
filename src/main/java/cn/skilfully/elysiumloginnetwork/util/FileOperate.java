@@ -115,7 +115,7 @@ public class FileOperate {
             Log.getLog().outWarn("配置文件 " + fixed.getName() + " 缺少必须键！正在补全.....");
             // 补充键
             for (String key : sourcesKeys){
-                YamlOperate.addKey(fixed,key,"");
+                YamlOperate.addKey(fixed,key,YamlOperate.getVal(sourcePath,key));
             }
             Log.getLog().ok("成功补全 " + fixed.getName() + " 请填写正确值！");
             return;
@@ -131,7 +131,7 @@ public class FileOperate {
         // 当完全不一样时
         Log.getLog().smallOutWarn("配置文件 " + fixed.getName() + " 有多余键并且缺失必须键！请手动删除多余键！自检过程中只保证必须键正确！！！");
         for (String key : sourcesKeys){
-            YamlOperate.addKey(fixed,key,"");
+            YamlOperate.addKey(fixed,key,YamlOperate.getVal(sourcePath,key));
         }
     }
 

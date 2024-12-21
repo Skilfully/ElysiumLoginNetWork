@@ -3,8 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ElysiumLoginNetWork.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ElysiumLoginNetWork.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ElysiumLoginNetWork.test.iml" filepath="$PROJECT_DIR$/.idea/modules/ElysiumLoginNetWork.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/cn.skilfully.ElysiumLoginNetWork.main.iml" filepath="$PROJECT_DIR$/.idea/modules/cn.skilfully.ElysiumLoginNetWork.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/project.ElysiumLoginNetWork.main.iml" filepath="$PROJECT_DIR$/.idea/modules/project.ElysiumLoginNetWork.main.iml" />
     </modules>
   </component>
 </project>

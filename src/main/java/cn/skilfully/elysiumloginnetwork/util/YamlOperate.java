@@ -16,7 +16,27 @@ import java.util.Set;
  */
 public class YamlOperate {
 
-    public static void addKey(@NotNull File file, @NotNull String key, @NotNull String val) throws IOException {
+    public static Object getVal(String resourcePath, String key){
+        return getVal(resourcesToYamlConfiguration(resourcePath),key);
+    }
+
+    public static Object getVal(File file, String key){
+        YamlConfiguration config = YamlConfiguration.loadConfiguration(file);
+        return getVal(config,key);
+    }
+
+    public static Object getVal(@NotNull YamlConfiguration config, String key){
+        return config.get(key);
+    }
+
+    /**
+     * 添加key和初始值
+     * @param file 操作的文件
+     * @param key 键
+     * @param val 值
+     * @throws IOException IOException
+     */
+    public static void addKey(@NotNull File file, @NotNull String key, @NotNull Object val) throws IOException {
         // 转换为 YamlConfiguration 对象
         YamlConfiguration config = YamlConfiguration.loadConfiguration(file);
         // 设置键 默认值为“”
@@ -79,6 +99,15 @@ public class YamlOperate {
      * @return 包含所有键的Set
      */
     public static @NotNull Set<String> getAllKeys(String resourcePath){
+        return getAllKeys(resourcesToYamlConfiguration(resourcePath),"");
+    }
+
+    /**
+     * 资源文件转yml
+     * @param resourcePath 资源文件的路径
+     * @return YamlConfiguration对象
+     */
+    public static YamlConfiguration resourcesToYamlConfiguration(String resourcePath){
         // 获取类加载器
         ClassLoader classLoader = YamlOperate.class.getClassLoader();
 
@@ -94,7 +123,7 @@ public class YamlOperate {
         }
 
         // 将输入流转换为 FileConfiguration 对象
-        FileConfiguration config = YamlConfiguration.loadConfiguration(new InputStreamReader(inputStream));
+        YamlConfiguration config = YamlConfiguration.loadConfiguration(new InputStreamReader(inputStream));
 
         // 关闭输入流
         try {
@@ -102,7 +131,6 @@ public class YamlOperate {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
-        return getAllKeys(config,"");
+        return config;
     }
 }

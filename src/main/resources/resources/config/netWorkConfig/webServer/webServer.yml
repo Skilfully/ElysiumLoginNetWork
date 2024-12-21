@@ -1,0 +1,13 @@
+# web服务器配置文件
+# web服务器可以使用中心服务器的也可以使用自建的
+# 具体搭建流程看我的视频
+
+# jar名字
+jarName: webServer-1.0
+
+# 启动命令
+startCommand: java -jar
+
+# 其他命令
+# 就是其他参数
+otherCommand: null
