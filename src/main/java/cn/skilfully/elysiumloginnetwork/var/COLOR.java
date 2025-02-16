@@ -1,7 +1,5 @@
 package cn.skilfully.elysiumloginnetwork.var;
 
-import java.util.Random;
-
 /**
  * 颜色信息
  */
